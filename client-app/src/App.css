@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+form label{
+  display: inline-block;
+  width: 100px;
+}
+form div{
+  
+  margin: 10px;
+}
+form{display: inline-block;
+  border: 2px solid whitesmoke;
+  background-color:black;
+  color: white;
+}
+.dd{color: whitesmoke;}
+.profilePicPreview{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border: 2px solid black;
+}
+nav{
+  background-color: darkorange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+img{width: 350px;}
+body{background-color: black;color: whitesmoke;}
