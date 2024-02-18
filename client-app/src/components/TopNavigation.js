@@ -20,7 +20,7 @@ function TopNavigation() {
         let reqOptions={method:"PUT",
                         body:dataToSend,}
 
-        let JSONData=await fetch("http://localhost:7865/deleteProfile",reqOptions)
+        let JSONData=await fetch("/deleteProfile",reqOptions)
         let JSOData=await JSONData.json();
         if(JSOData.status==="success"){
             alert(JSOData.msg);

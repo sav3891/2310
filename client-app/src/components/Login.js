@@ -26,7 +26,7 @@ function Login() {
     dataToSend.append("email",emailInputRef.current.value);
     dataToSend.append("password",passwordInputRef.current.value);
 
-    let response= await axios.post("http://localhost:7865/login",dataToSend);
+    let response= await axios.post("/login",dataToSend);
     if (response.data.data.status === "failure") {
       alert(response.data.data.msg);
     } else {
@@ -53,7 +53,7 @@ function Login() {
     dataToSend.append("password", passwordInputRef.current.value);
 
     let reqOptions = { method: "POST", body: dataToSend };
-    let JSONData = await fetch("http://localhost:7865/login", reqOptions);
+    let JSONData = await fetch("/login", reqOptions);
     let JSOData = await JSONData.json();
     if (JSOData.status === "failure") {
       alert(JSOData.msg);
@@ -76,7 +76,7 @@ function Login() {
     dataToSend.append("password", passwordInputRef.current.value);
 
     let reqOptions = { method: "POST", body: dataToSend };
-    let JSONData = await fetch("http://localhost:7865/login", reqOptions);
+    let JSONData = await fetch("/login", reqOptions);
     let JSOData = await JSONData.json();
     if (JSOData.status === "failure") {
       alert(JSOData.msg);
@@ -101,7 +101,7 @@ function Login() {
         let reqOptions={method:"POST",
                         body:dataToSend,};
 
-          let JSONData=await fetch("http://localhost:7865/loginWithToken",reqOptions);
+          let JSONData=await fetch("/loginWithToken",reqOptions);
           let JSOData=await JSONData.json();
           if (JSOData.status === "failure") {
             alert(JSOData.msg);

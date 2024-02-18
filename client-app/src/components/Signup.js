@@ -35,7 +35,7 @@ function Signup() {
                     
                     body:dataToSend,};
                     
-    let JSONData=await fetch("http://localhost:7865/signup",reqOptions);
+    let JSONData=await fetch("/signup",reqOptions);
     let JSOData=await JSONData.json();
     if(JSOData.status==="success"){alert(JSOData.msg);}
     console.log(JSOData);                
