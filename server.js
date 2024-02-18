@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const bcrypt = require("bcrypt");
 dotenv.config();
+const path=require("node:path");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -26,6 +27,9 @@ app.use(cors());
 app.use(express.json());
 //app.use(express.urlencoded());
 app.use("/uploads", express.static("uploads"));
+
+app.use(express.static(path.join(__dirname,"./client-app/build")));
+
 
 
 let validateToken=(req,res,next)=>{
